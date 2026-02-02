@@ -102,6 +102,9 @@ if [ -f "$HASH_FILE" ]; then
         
         # Update the hash file
         echo "$CURRENT_HASH" > "$HASH_FILE"
+
+    else
+        echo "$(date): No changes detected." >> "$PROJECT_DIR/webnotifs.log"
     fi
 else
     echo "Initial run: Saving site fingerprint."
